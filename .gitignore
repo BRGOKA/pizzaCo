@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+.eslintrc.cjs
+.prettierrc
+postcss.config.js
+prettier.config.js

@@ -83,7 +83,10 @@ function CreateOrder() {
         </div>
 
         <div>
-          <button disabled={isSubmitting}>
+          <button
+            disabled={isSubmitting}
+            className="inline-block rounded-full bg-yellow-400 px-4 py-3 font-semibold uppercase tracking-wider transition-colors duration-500 hover:bg-yellow-500 focus:bg-yellow-500 focus:outline-none focus:ring focus:ring-yellow-900 focus:ring-offset-2"
+          >
             {isSubmitting ? "placing Order" : "Order now"}
           </button>
         </div>
