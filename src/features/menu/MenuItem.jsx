@@ -1,20 +1,30 @@
+import Button from "../../ui/Button";
 import { formatCurrency } from "../../utils/helpers";
 
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza;
 
   return (
-    <li className="overflow-hidden rounded-t-xl bg-amber-200 shadow-lg transition-all duration-300 hover:scale-110 hover:cursor-pointer">
+    <li className="flex gap-2 py-2">
       <img
-        className="w-screen transition-all duration-300 hover:scale-110"
+        className={`h-24 ${soldOut ? "opacity-70 grayscale" : ""}`}
         src={imageUrl}
         alt={name}
       />
-      <div className="p-2">
-        <p>{name}</p>
-        <p>{ingredients.join(", ")}</p>
-        <div>
-          {!soldOut ? <p>{formatCurrency(unitPrice)}</p> : <p>Sold out</p>}
+      <div className="flex flex-grow flex-col pl-2">
+        <p className="mt-0 pt-0 font-medium">{name}</p>
+        <p className="text-sm capitalize italic text-stone-700">
+          {ingredients.join(", ")}
+        </p>
+        <div className="mt-auto flex items-center justify-between font-medium uppercase text-stone-700">
+          {!soldOut ? (
+            <>
+              <p>{formatCurrency(unitPrice)}</p>
+              <Button type={"small"}>Add to cart</Button>
+            </>
+          ) : (
+            <p>Sold out</p>
+          )}
         </div>
       </div>
     </li>
