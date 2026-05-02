@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import Button from "../../ui/Button";
 import { formatCurrency } from "../../utils/helpers";
-import { delItem } from "./cartSlice";
+import { decItemQuant, delItem, incItemQuant } from "./cartSlice";
 
 function CartItem({ item }) {
   const { pizzaId, name, quantity, totalPrice } = item;
@@ -16,6 +16,19 @@ function CartItem({ item }) {
         {quantity}&times; {name}
       </p>
       <div className="flex items-center justify-between sm:gap-6">
+        <div>
+          <Button onclick={() => dispach(decItemQuant(pizzaId))} type="small">
+            -1
+          </Button>
+          <input
+            className="w-8 bg-transparent text-center"
+            value={quantity}
+            disabled
+          />
+          <Button onclick={() => dispach(incItemQuant(pizzaId))} type="small">
+            +1
+          </Button>
+        </div>
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
         <Button onclick={handleDelete} type="small">
           Delete
