@@ -1,7 +1,6 @@
 // import { getAddress } from "../../services/apiGeocoding";
 
 import { createSlice } from "@reduxjs/toolkit";
-import Username from "./Username";
 
 // function getPosition() {
 //   return new Promise(function (resolve, reject) {
