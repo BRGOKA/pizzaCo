@@ -9,7 +9,6 @@ function MenuItem({ pizza }) {
 
   const cart = useSelector(getCart);
   const itemExistInCart = cart.some((item) => item.pizzaId === id);
-  console.log(itemExistInCart);
 
   const dispatch = useDispatch();
 

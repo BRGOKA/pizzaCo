@@ -18,7 +18,7 @@ function CartItem({ item }) {
       <div className="flex items-center justify-between sm:gap-6">
         <div>
           <Button onclick={() => dispach(decItemQuant(pizzaId))} type="small">
-            -1
+            -
           </Button>
           <input
             className="w-8 bg-transparent text-center"
@@ -26,7 +26,7 @@ function CartItem({ item }) {
             disabled
           />
           <Button onclick={() => dispach(incItemQuant(pizzaId))} type="small">
-            +1
+            +
           </Button>
         </div>
         <p className="text-sm font-bold">{formatCurrency(totalPrice)}</p>
