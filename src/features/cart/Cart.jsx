@@ -2,16 +2,19 @@ import { Link } from "react-router-dom";
 import Button from "../../ui/Button";
 import CartItem from "./CartItem";
 import { useDispatch, useSelector } from "react-redux";
-import { clearCart } from "./cartSlice";
+import { clearCart, getCart } from "./cartSlice";
+import EmptyCart from "./EmptyCart";
 
 function Cart() {
-  const cart = useSelector((state) => state.cart.cart);
+  const cart = useSelector(getCart);
   const username = useSelector((state) => state.user.username);
   const dispach = useDispatch();
+
   function handleClear() {
     dispach(clearCart());
   }
 
+  if (!cart.length) return <EmptyCart />;
   return (
     <div className="px-4 py-3">
       <Link
