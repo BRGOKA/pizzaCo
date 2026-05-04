@@ -83,7 +83,3 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 This project is part of a React course by Jonas Schmedtmann. Please check the course materials for licensing information.
 
-## 🙏 Acknowledgments
-
-- Built as part of [The Ultimate React Course](https://www.udemy.com/course/the-ultimate-react-course/) by Jonas Schmedtmann
-- Pizza data and API services provided by the course
