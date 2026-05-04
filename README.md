@@ -75,7 +75,3 @@ src/
 └── App.jsx           # Main app component
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
