@@ -25,7 +25,7 @@ A modern, fast pizza ordering application built with React. This project demonst
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/your-username/fast-react-pizza.git
+   git clone https://github.com/BRGOKA/fast-react-pizza.git
    cd fast-react-pizza
    ```
 
