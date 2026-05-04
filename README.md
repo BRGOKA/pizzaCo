@@ -79,7 +79,3 @@ src/
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📄 License
-
-This project is part of a React course by Jonas Schmedtmann. Please check the course materials for licensing information.
-
