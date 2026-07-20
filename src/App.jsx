@@ -34,7 +34,7 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
+// day 2 on vacation xD 
 function App() {
   return <RouterProvider router={router} />;
 }
